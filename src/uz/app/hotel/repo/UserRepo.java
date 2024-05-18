@@ -27,8 +27,15 @@ public class UserRepo implements UserService {
         }
         Hotel hotel = db.hotels.get(hotelIndexChooseHotel);
         hotel.getIntegerRoomHashMap().forEach((key,val)->{
-
+            for (Integer i = 1; i <=key; i++) {
+                System.out.println(i+"- floor");
+                for (int i1 = 1; i1 <=val.size(); i1++) {
+                    System.out.println(val.get(i));
+                }
+            }
         });
+        int index=getInt("Chosse room ")-1;
+
 
     }
 
