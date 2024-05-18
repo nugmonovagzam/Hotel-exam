@@ -8,6 +8,7 @@ public class Hotel {
     private Location location;
     private Integer floors;
     private Integer roomsCount;
+    private Integer numberOfUsers=0;
 
     public Hotel(String name, Location location, Integer floors, Integer roomsCount) {
         this.name = name;
@@ -46,6 +47,10 @@ public class Hotel {
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public String getId() {
+        return id;
     }
 
     @Override
