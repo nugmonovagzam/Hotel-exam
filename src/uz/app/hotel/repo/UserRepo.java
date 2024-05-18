@@ -19,6 +19,16 @@ public class UserRepo implements UserService {
 
     @Override
     public void service() {
+        showHotels();
+        int hotelIndexChooseHotel = getInt("Choose hotel ") - 1;
+        if (hotelIndexChooseHotel> db.hotels.size()){
+            System.out.println("This index no hotel");
+            return;
+        }
+        Hotel hotel = db.hotels.get(hotelIndexChooseHotel);
+        hotel.getIntegerRoomHashMap().forEach((key,val)->{
+
+        });
 
     }
 
