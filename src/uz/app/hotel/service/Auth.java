@@ -1,5 +1,6 @@
 package uz.app.hotel.service;
 
+<<<<<<< HEAD
 import uz.app.hotel.database.DB;
 import uz.app.hotel.entity.User;
 import uz.app.hotel.repo.UserRepo;
@@ -23,10 +24,18 @@ public class Auth implements AuthService {
         User user = new User(name, userName, password);
         db.users.add(user);
         System.out.println("user adding !!");
+=======
+public class Auth implements AuthService{
+
+    @Override
+    public void signUp() {
+
+>>>>>>> 7ee27af10ff4b4327cc38de25d9e28a2b12ce99f
     }
 
     @Override
     public void signIn() {
+<<<<<<< HEAD
         String userName = getLine("Enter user name");
         String password = getLine("Enter password");
         for (int i = 0; i < db.users.size(); i++) {
@@ -38,5 +47,8 @@ public class Auth implements AuthService {
                 }
             }
         }
+=======
+
+>>>>>>> 7ee27af10ff4b4327cc38de25d9e28a2b12ce99f
     }
 }
