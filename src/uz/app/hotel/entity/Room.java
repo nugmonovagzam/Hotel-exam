@@ -7,9 +7,9 @@ public class Room {
     public Room() {
     }
 
-    public Room(int numberRoom, RoomStatus roomStatus) {
+    public Room(int numberRoom) {
         this.numberRoom = numberRoom;
-        this.roomStatus = roomStatus;
+        this.roomStatus = RoomStatus.OPEN;
     }
 
     public int getNumberRoom() {

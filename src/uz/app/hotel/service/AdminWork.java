@@ -8,7 +8,7 @@ import static uz.app.hotel.utils.Utils.*;
 public class AdminWork implements AdminService {
     DB db=DB.getInstance();
     @Override
-    public void service() {
+     public  void service() {
         while (true){
             switch (menu()){
                 case 0->{

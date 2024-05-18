@@ -8,6 +8,8 @@ import static uz.app.hotel.utils.Utils.*;
 
 public class Auth implements AuthService {
     DB db = DB.getInstance();
+    AdminWork adminWork=new AdminWork();
+    UserRepo userRepo = new UserRepo();
 
     @Override
     public void signUp() {
@@ -31,9 +33,9 @@ public class Auth implements AuthService {
         for (int i = 0; i < db.users.size(); i++) {
             if (db.users.get(i).getUsername().equals(userName) && db.users.get(i).getPassword().equals(password)) {
                 if (db.users.get(i).getUserRole().name().equals("USER")) {
-                    UserRepo.setCurrentUser(db.users.get(i));
-                } else {
-
+                   userRepo.setCurrentUser(db.users.get(i));
+                } else if (db.users.get(i).getUserRole().name().equals("ADMIN")) {
+                    adminWork.service();
                 }
             }
         }

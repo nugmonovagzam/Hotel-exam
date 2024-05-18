@@ -1,16 +1,10 @@
 package uz.app.hotel.repo;
 
-<<<<<<< HEAD
-=======
 import uz.app.hotel.entity.Hotel;
 import uz.app.hotel.service.HotelService;
->>>>>>> 7ee27af10ff4b4327cc38de25d9e28a2b12ce99f
 
 import java.util.List;
 
-<<<<<<< HEAD
-
-=======
 public class HotelRepo implements HotelService {
 
     @Override
@@ -37,5 +31,4 @@ public class HotelRepo implements HotelService {
     public boolean delete(String id) {
         return false;
     }
->>>>>>> 7ee27af10ff4b4327cc38de25d9e28a2b12ce99f
 }
